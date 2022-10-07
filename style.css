@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4A98F7;
+    height: 100vh;
+}
+
+.frame {
+    width: 350px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+}
+
+.frame .img{
+    height: 200px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.frame .main_time{
+    margin: 20px 0;
+}
+
+
+.frame .img img{
+    max-width: 50%;
+}
+
+.frame .main_time h1{
+    font-size: 38px;
+}
+
+.frame .set_time{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px 0;
+}
+.frame .set_time.disable{
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.frame .set_time .col{
+    height: 40px;
+    width: calc(100% / 3 - 5px);
+    background-color: red;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.frame .set_time .col select{
+    height: 100%;
+    width: 100%;
+    font-size: 20px;
+}
+
+
+.frame .btn button{
+    width: 100%;
+    height: 40px;
+    margin: 5px 0;
+    cursor: pointer;
+    color: white;
+    background-color: #4A98F7;
+    border: none;
+    outline: none;
+    font-size: 22px;
+}
+
+.frame .btn #clearBtn{
+    display: none;
+}
