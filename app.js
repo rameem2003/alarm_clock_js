@@ -54,6 +54,10 @@ setInterval(() => {
         ap = "AM"
     }
 
+    if(h > 12){
+        h = h - 12;
+    }
+
     if(h < 10){
         h = `0${h}`;
     }
@@ -66,9 +70,7 @@ setInterval(() => {
         s = `0${s}`;
     }
 
-    if(h > 12){
-        h = h - 12;
-    }
+    
 
     mainClockPanel.innerHTML = `${h} : ${m} : ${s} ${ap}`;
 
