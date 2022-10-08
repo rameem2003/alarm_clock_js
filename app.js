@@ -6,6 +6,7 @@ const clearBtn = document.getElementById("clearBtn");
 
 let alarmTime;
 let alarmTone = new Audio("./assets/ring_tone.mp3")
+let alarmState = false;
 
 for(let i = 12; i > 0; i--){
     if(i < 10){
@@ -78,6 +79,10 @@ setInterval(() => {
         alarmTone.play();
         console.log("Alarm");
     }
+
+    // setTimePanel.classList.remove("disable");
+    // setAlaremBtn.style.display = "initial";
+    // clearBtn.style.display = "none"
 }, 1000)
 
 const setAlarm = () => {
@@ -91,11 +96,14 @@ const setAlarm = () => {
     setAlaremBtn.style.display = "none";
     clearBtn.style.display = "initial"
     alarmTime = setTime;
-
-
 }
 
 setAlaremBtn.addEventListener("click", setAlarm);
+
 clearBtn.addEventListener("click", () => {
-    window.location.reload();
+    alarmTime = "";
+    alarmTone.pause();
+    setTimePanel.classList.remove("disable");
+    setAlaremBtn.style.display = "initial";
+    clearBtn.style.display = "none"
 })
